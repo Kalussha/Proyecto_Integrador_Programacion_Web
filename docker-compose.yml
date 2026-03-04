@@ -1,0 +1,75 @@
+# ================================================================
+# docker-compose.yml
+# Orquestación de servicios — MecánicaTec
+# Levanta: API Principal (3000) + Microservicio Ingenieros (4000)
+# ================================================================
+
+version: '3.9'
+
+services:
+
+  # ---------------------------------------------------------------
+  # Servicio 1: API Principal
+  # ---------------------------------------------------------------
+  mecanica-api:
+    build:
+      context: ./Source
+      dockerfile: Dockerfile
+    container_name: mecanica-api
+    image: mecanica-api:1.0
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    networks:
+      - mecanica-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------
+  # Servicio 2: Microservicio de Ingenieros
+  # ---------------------------------------------------------------
+  microservicio-ingenieros:
+    build:
+      context: ./Source/microservicio-ingenieros
+      dockerfile: Dockerfile
+    container_name: microservicio-ingenieros
+    image: microservicio-ingenieros:1.0
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+    restart: unless-stopped
+    networks:
+      - mecanica-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:4000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# ----------------------------------------------------------------
+# Red interna compartida entre los servicios
+# ----------------------------------------------------------------
+networks:
+  mecanica-network:
+    driver: bridge
+    name: mecanica-network
