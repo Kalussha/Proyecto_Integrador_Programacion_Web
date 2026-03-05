@@ -663,6 +663,9 @@ networks:
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/3840px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="img-fluid my-3">
                             <p>Líder del mercado con mayor variedad de servicios: EC2, S3, RDS, Lambda, etc.</p>
                             <span class="badge bg-warning text-dark">Más servicios</span>
+                            <button class="btn btn-outline-warning btn-sm mt-3 w-100" data-bs-toggle="modal" data-bs-target="#awsModal">
+                                <i class="bi bi-info-circle"></i> Más información
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -673,6 +676,9 @@ networks:
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1280px-Microsoft_Azure_Logo.svg.png" alt="Azure" class="img-fluid my-3">
                             <p>Especializado en integración con productos Microsoft: Office 365, Dynamics, SQL Server</p>
                             <span class="badge bg-primary">Integración Office</span>
+                            <button class="btn btn-outline-primary btn-sm mt-3 w-100" data-bs-toggle="modal" data-bs-target="#azureModal">
+                                <i class="bi bi-info-circle"></i> Más información
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -683,6 +689,9 @@ networks:
                             <img src="https://ausum.cloud/wp-content/uploads/2024/04/0_r4wOvRFGy78MfMh4.png" alt="GCP" class="img-fluid my-3">
                             <p>Fuerte en datos, análisis y Machine Learning: BigQuery, Dataflow, TensorFlow</p>
                             <span class="badge bg-danger">Data & ML</span>
+                            <button class="btn btn-outline-danger btn-sm mt-3 w-100" data-bs-toggle="modal" data-bs-target="#gcpModal">
+                                <i class="bi bi-info-circle"></i> Más información
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -822,6 +831,159 @@ networks:
             </div>
         </div>
     </section>
+
+    <!-- Modal - AWS -->
+    <div class="modal fade" id="awsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #FF9900; color: white;">
+                    <h5 class="modal-title"><i class="bi bi-cloud"></i> Amazon Web Services (AWS)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Acerca de AWS</h6>
+                    <p>Amazon Web Services es la plataforma de nube más adoptada y completa del mundo, con más de 200 servicios disponibles desde centros de datos en todo el mundo. Fue lanzada en 2006 y es líder del mercado.</p>
+
+                    <h6 class="mt-4">Servicios Principales</h6>
+                    <ul>
+                        <li><strong>EC2 (Elastic Compute Cloud):</strong> Servidores virtuales escalables</li>
+                        <li><strong>S3 (Simple Storage Service):</strong> Almacenamiento de objetos ilimitado</li>
+                        <li><strong>RDS (Relational Database Service):</strong> Bases de datos relacionales administradas</li>
+                        <li><strong>Lambda:</strong> Computación serverless sin gestión de servidores</li>
+                        <li><strong>DynamoDB:</strong> Base de datos NoSQL de alto rendimiento</li>
+                        <li><strong>CloudFront:</strong> Red de entrega de contenido (CDN)</li>
+                    </ul>
+
+                    <h6 class="mt-4">Ventajas</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Mayor variedad de servicios</li>
+                                <li>Infraestructura global masiva</li>
+                                <li>Certificaciones de seguridad</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Comunidad más grande</li>
+                                <li>Gran ecosistema de partners</li>
+                                <li>Documentación extensa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="mt-4">Casos de Uso</h6>
+                    <p>AWS es ideal para aplicaciones web, e-commerce, big data, machine learning, IoT y backup/recuperación ante desastres.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://aws.amazon.com/es/" target="_blank" class="btn btn-warning">Visitar AWS</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Azure -->
+    <div class="modal fade" id="azureModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #0078D4; color: white;">
+                    <h5 class="modal-title"><i class="bi bi-cloud"></i> Microsoft Azure</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Acerca de Azure</h6>
+                    <p>Microsoft Azure es la plataforma de nube de Microsoft lanzada en 2010. Es la segunda plataforma más grande y se integra perfectamente con productos Microsoft como Office 365, Windows Server, Active Directory y Visual Studio.</p>
+
+                    <h6 class="mt-4">Servicios Principales</h6>
+                    <ul>
+                        <li><strong>Virtual Machines:</strong> Máquinas virtuales Windows y Linux</li>
+                        <li><strong>App Service:</strong> Hospedaje de aplicaciones web y móviles</li>
+                        <li><strong>Azure SQL Database:</strong> Base de datos SQL administrada</li>
+                        <li><strong>Azure Functions:</strong> Computación serverless basada en eventos</li>
+                        <li><strong>Azure Kubernetes Service (AKS):</strong> Orquestación de contenedores</li>
+                        <li><strong>Azure Active Directory:</strong> Gestión de identidades y acceso</li>
+                    </ul>
+
+                    <h6 class="mt-4">Ventajas</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Integración Microsoft perfecta</li>
+                                <li>Soporte híbrido cloud excepcional</li>
+                                <li>Cumplimiento normativo amplio</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>DevOps integrado</li>
+                                <li>Soporte empresarial robusto</li>
+                                <li>Inteligencia artificial integrada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="mt-4">Casos de Uso</h6>
+                    <p>Azure es ideal para empresas que usan productos Microsoft, soluciones híbridas (nube + on-premise), aplicaciones empresariales .NET, y DevOps.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://azure.microsoft.com/es-es/" target="_blank" class="btn btn-primary">Visitar Azure</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Google Cloud -->
+    <div class="modal fade" id="gcpModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #4285F4; color: white;">
+                    <h5 class="modal-title"><i class="bi bi-cloud"></i> Google Cloud Platform</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Acerca de GCP</h6>
+                    <p>Google Cloud Platform es el conjunto de servicios de computación en la nube de Google. Utiliza la misma infraestructura que Google usa internamente para productos como YouTube, Gmail y Google Search.</p>
+
+                    <h6 class="mt-4">Servicios Principales</h6>
+                    <ul>
+                        <li><strong>Compute Engine:</strong> Máquinas virtuales de alto rendimiento</li>
+                        <li><strong>App Engine:</strong> Plataforma para aplicaciones web escalables</li>
+                        <li><strong>Cloud Storage:</strong> Almacenamiento de objetos unificado</li>
+                        <li><strong>BigQuery:</strong> Análisis de big data súper rápido</li>
+                        <li><strong>Cloud Functions:</strong> Funciones serverless orientadas a eventos</li>
+                        <li><strong>Kubernetes Engine (GKE):</strong> Orquestación de contenedores (Google creó Kubernetes)</li>
+                    </ul>
+
+                    <h6 class="mt-4">Ventajas</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Líder en Big Data y ML/AI</li>
+                                <li>Mejor precio/rendimiento</li>
+                                <li>Innovación en Kubernetes</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Red global ultra rápida</li>
+                                <li>Analítica de datos avanzada</li>
+                                <li>Sostenibilidad (carbon-neutral)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="mt-4">Casos de Uso</h6>
+                    <p>GCP es ideal para análisis de big data, machine learning, aplicaciones basadas en contenedores, procesamiento de datos en tiempo real, y startups tecnológicas.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://cloud.google.com/" target="_blank" class="btn btn-danger">Visitar GCP</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal - ¿Qué es una API? -->
     <div class="modal fade" id="apiModal" tabindex="-1">
